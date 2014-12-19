@@ -1,0 +1,10 @@
+Import('Env libMarchingCubes')
+env = Env.Clone()
+env.Prepend(LIBS=[libMarchingCubes])
+
+helloworld = env.Program(target = 'helloworld'
+                       , source = env.Object('helloworld.cpp'))
+
+applications = [helloworld]
+
+Return('applications')

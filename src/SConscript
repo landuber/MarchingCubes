@@ -1,0 +1,7 @@
+Import('Env')
+sources = ['sample.cpp']
+
+libMarchingCubes = Env.StaticLibrary(target = 'MarchingCubes'
+                                   , source = sources)
+
+Return('libMarchingCubes')
